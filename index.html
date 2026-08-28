@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive developer-experience benchmark concept." />
+  <title>How developers spend their time | DX Benchmark</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section class="access-gate" id="access-gate" aria-labelledby="gate-title"><div><p class="eyebrow">Private review link</p><h1 id="gate-title">Developer experience<br>benchmark explorer</h1><p>This concept is shared for review. Enter the access password to continue.</p><form id="access-form"><label for="access-password">Access password</label><div><input id="access-password" type="password" autocomplete="current-password" required /><button type="submit">Enter</button></div><span id="access-error" role="alert"></span></form><small>This is a lightweight browser-based review gate, not secure access control.</small></div></section>
+  <main class="shell">
+    <nav class="topbar" aria-label="Page navigation"><a class="wordmark" href="#top">Atlassian <i>DX</i></a><span>Benchmark explorer · concept</span><a href="#method">Methodology ↓</a></nav>
+    <header class="hero" id="top">
+      <p class="eyebrow">Developer experience benchmark · March—August 2026</p>
+      <h1>How developers<br>spend their time.</h1>
+      <div class="hero-bottom"><p>Four industry views of the work that builds products—and the friction that takes time away from it.</p><div class="sample"><strong id="sample-size">482</strong><span>engineering teams<br>in this view</span></div></div>
+    </header>
+
+    <section class="controls" aria-label="Benchmark filters">
+      <div class="filter-group"><span>Company size</span><div class="pills" id="company-filters"></div></div>
+      <div class="filter-group"><span>Industry</span><div class="pills" id="industry-filters"></div></div>
+      <button class="reset" id="reset-filters" type="button">Reset filters</button>
+    </section>
+    <section class="reading-note" aria-live="polite"><span>01</span><p id="insight-copy"></p></section>
+
+    <section class="chapter chapter-blue" aria-labelledby="building-heading">
+      <div class="chapter-intro"><p class="chapter-number">01 / Time allocation</p><h2 id="building-heading">The work that moves the business forward competes with the work that keeps it running.</h2><p class="chapter-copy">Each industry view shows how a developer’s year is allocated across innovation, keeping the lights on, and other work from Q1 through Q4 FY26.</p></div>
+      <figure class="visual visual-feature"><div class="chart-slot" id="time-allocation-chart"></div><figcaption><div class="legend allocation-legend" id="time-legend"></div><span>Share of developer time · FY26</span></figcaption></figure>
+    </section>
+
+    <section class="chapter chapter-light" aria-labelledby="focus-heading">
+      <div class="chapter-intro"><p class="chapter-number">02 / Deep focus</p><h2 id="focus-heading">The scarcest resource is a block of time no one interrupts.</h2><p class="chapter-copy">Focus is counted as a continuous 90-minute or longer period. See both the space available for demanding work and the recurring friction that breaks it apart.</p></div>
+      <div class="focus-grid">
+        <figure class="visual"><div class="visual-header"><div><p class="metric-label">Uninterrupted work</p><h3>Time available for deep focus</h3></div><span>Hours / week</span></div><div class="chart-slot" id="focus-chart"></div><figcaption><div class="legend" id="focus-legend"></div><span>Six-month trend by industry</span></figcaption></figure>
+        <figure class="visual"><div class="visual-header"><div><p class="metric-label">Time-loss drivers</p><h3>What breaks focus apart</h3></div><span>Focus-loss score / 100</span></div><div class="chart-slot" id="loss-chart"></div><figcaption><div class="legend" id="loss-legend"></div><span>Average over the last 12 months · higher is worse</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="chapter chapter-ink" aria-labelledby="friction-heading">
+      <div class="chapter-intro"><p class="chapter-number">03 / Driver impact</p><h2 id="friction-heading">Not every experience driver has the same effect.</h2><p class="chapter-copy">Plot perceived strength against its relative impact to identify where improving the developer experience is most likely to improve outcomes.</p></div>
+      <figure class="visual impact-visual"><div class="visual-header"><div><p class="metric-label">Survey-driver analysis</p><h3>Which drivers move the outcome?</h3></div><div class="outcome-toggle" id="outcome-toggle" aria-label="Select outcome"></div></div><div class="impact-layout"><div class="chart-slot" id="impact-chart"></div><aside class="driver-key" id="driver-key" aria-label="Driver legend"></aside></div><figcaption><span>Horizontal: mean survey score (0–100) · Vertical: outcome impact (0–100)</span><span>Hover a point for the survey item</span></figcaption></figure>
+    </section>
+
+    <section class="method" id="method"><p class="chapter-number">04 / Read the data well</p><div><h2>Use the explorer to see the pattern. Do not mistake it for causation.</h2><p>This concept uses synthetic benchmark data for design testing. In a production view, every finding should show its sample, time range, source, and metric definition. Activity signals describe work; they do not, on their own, prove business value.</p></div><dl><div><dt>Population</dt><dd>Engineering teams</dd></div><div><dt>Period</dt><dd>March—August 2026</dd></div><div><dt>Interaction</dt><dd>Hover to inspect values</dd></div></dl></section>
+    <footer><span>Mock data for concept testing only.</span><span>Designed as a research narrative with an explorable industry cut.</span></footer>
+  </main>
+  <div class="tooltip" id="tooltip" role="status" aria-hidden="true"></div>
+  <script src="app.js"></script>
+</body>
+</html>
